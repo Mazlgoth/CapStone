@@ -17,3 +17,7 @@
 end
 
 puts "10 posts created"
+
+User.create!(name: "Ben Schwind", email: "test@test.com", password: "asdfasdf", password_confirmation: "asdfasdf")
+
+puts "1 User created"
