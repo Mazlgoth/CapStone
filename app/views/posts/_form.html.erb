@@ -21,7 +21,15 @@
     <%= form.text_area :body %>
   </div>
 
+  <div class="field">
+    <%= form_for @post do |f| %>
+      <%= form.file_field :thumb_image %>
+    <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
 <% end %>
+
+

@@ -8,18 +8,16 @@
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'posts', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-
     
     <%= render 'shared/nav', location: 'top' %>
-   
-    <%= login_helper %>
 
     <%= yield %>
+
   </body>
 </html>
