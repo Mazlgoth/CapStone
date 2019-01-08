@@ -60,3 +60,4 @@ gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
 gem 'devise', '~> 4.5' 
 gem 'petergate', '~> 2.0', '>= 2.0.1'
+

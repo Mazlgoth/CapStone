@@ -2,6 +2,8 @@
   "name": "CapStone",
   "private": true,
   "dependencies": {
-    "materialize-css": "^1.0.0-rc.2"
+    "@material/top-app-bar": "^0.42.0",
+    "materialize-css": "^1.0.0-rc.2",
+    "metro4": "^4.2.34"
   }
 }
