@@ -1,19 +1,21 @@
 
-
-<div class="card image-header">
-    <div class="card-header fg-black">
-        <%= post.title %>
-        
-    </div>
-    <div class="card-content p-2">
-    	<%= image_tag post.thumb_image %>
-    	
+<div class="grid">
+  <div class="row">
+    <div class="card image-header cell-3" style="width: 520px">
+      <div class="card-header fg-black">
+        <%= post.title %>         
+      </div>
+      <div class="card-content p-2">
+      	<%= image_tag post.thumb_image %>
+      	
         <p class="fg-gray">Posted <%= distance_of_time_in_words(post.created_at, Time.now) %> ago.</p>
         <%= post.body %>
-    </div>
-    <div class="card-footer">
-    	<button class="button primary"><%= link_to 'Show', post %></button>
+      </div>
+      <div class="card-footer">
+      	<button class="button primary"><%= link_to 'Show', post %></button>
         <button class="button secondary"><%= link_to 'Edit', edit_post_path(post) if logged_in?(:site_admin) %></button>
         <button class="button secondary"><%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></button>
+      </div>
     </div>
+  </div>
 </div>

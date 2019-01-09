@@ -14,12 +14,17 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    
-    <%= render 'shared/nav', location: 'top' %>
 
-    <%= yield %>
+    <%= render 'shared/nav', location: 'top' %>
+    
+    <div class="container-fluid"  >
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      
+      
+
+      <%= yield %>
+    </div>
 
   </body>
 </html>

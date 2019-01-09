@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-  	@posts = Post.limit(3)
+  	@posts = Post.all
   end
 
   def about
