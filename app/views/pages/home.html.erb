@@ -1,40 +1,27 @@
+<h1 style="color: white;">Hi <%= current_user.first_name %></h1>
 
 
-<h1>Hi <%= current_user.first_name %></h1>
+  <div class="container text-center">
+    <div class="feature-table row mt-10 pos-absolute-md">
+      <% @posts.each do |post| %>
+        <div class="cell-md-5" style="margin-bottom: 30px;">
+          <%= image_tag 'cosplay.jpg', :class => 'thumb_image' %>
+        </div>
+        <div class="cell-md-7 d-inline-flex" style="margin-bottom: 30px;">
+          <div class="card" style="background-color: gray;">
+            <div class="card-header">
+              <h3><%= post.title %></h3>
+            </div>
+            <div class="card-content p-2">
+              <%= post.body %>
+            </div>
 
-<%= @posts.inspect %>
-
-<div class="grid">
-	<div class="row">
-    <div class="cell parent-cell">
-      <div class="row">
-        <div class="cell picture-cell"><div>image</div></div>
-        <div class="cell title-cell"><div><%= @posts.title %></div></div>
-        <div class="cell text-cell"><div>nested</div></div>
-        <div class="cell links-cell"><div>nested</div></div>
-      </div>
+            <div class="card-footer" style="justify-content: center;">
+              <%= link_to 'show', post %>
+            </div>
+          </div>
+        </div>
+      <% end %>
     </div>
-	</div>
-   
-	<div class="row">
-    <div class="cell parent-cell">
-      <div class="row">
-      	<div class="cell title-cell"><div>nested</div></div>      
-        <div class="cell text-cell"><div>nested</div></div>
-        <div class="cell links-cell"><div>nested</div></div>
-        <div class="cell picture-cell"><div>image</div></div>
-      </div>
-    </div>
-	</div>
+  </div>
 
-	<div class="row">
-    <div class="cell parent-cell">
-      <div class="row">
-        <div class="cell picture-cell"><div>image</div></div>
-        <div class="cell title-cell"><div>nested</div></div>
-        <div class="cell text-cell"><div>nested</div></div>
-        <div class="cell links-cell"><div>nested</div></div>
-      </div>
-    </div>
-	</div>
-</div>
