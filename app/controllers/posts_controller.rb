@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
-    @page_title = "Caustumes I've Done"
+    @page_title = "Costumes I've Done"
   end
 
   # GET /posts/1

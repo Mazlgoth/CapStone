@@ -1,11 +1,8 @@
+
 <div class="container-medium">
-	<p id="notice"><%= notice %></p>
+	<p id="notice"><%= notice %></p> 
 
-	
-
-	  <%= link_to ' Create New Post', new_post_path if logged_in?(:site_admin) %>
-
-	  <%= render @posts %>
+	<%= render @posts %>
 
 </div>
 

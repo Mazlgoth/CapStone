@@ -1,27 +1,37 @@
+<div class="feature-table row mt-10 pos-absolute-md">
+  <% @posts.each do |post| %>
+    <div class="cell-md-4 post-cell-parent">
+      <div class="card bg-grayBlue">
+        <div class="card-header">
+          <%= post.title %>         
+        </div>
+        <div class="card-content p-2">
+        	<%= image_tag 'cosplay.jpg', :class => 'thumb_image' %>
+        	
+          <p class="fg-gray">Posted <%= distance_of_time_in_words(post.created_at, Time.now) %> ago.</p>
+          <%= post.body %>
+        </div>
+        <div class="card-footer">
+          <button class="button bg-lightgrayBlue"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
 
+          <% if logged_in?(:site_admin) %>
+            <%= link_to '', edit_post_path(post), method: :edit, id: "edit_post_#{post.id}_from_index", class: 'mif-pencil mif-3x fg-black' %>
 
-  <div class="feature-table row mt-10 pos-absolute-md">
-    <% @posts.each do |post| %>
-      <div class="cell-md-4">
-        <div class="card">
-          <div class="card-header">
-            <%= post.title %>         
-          </div>
-          <div class="card-content p-2">
-          	<%= image_tag 'cosplay.jpg', :class => 'thumb_image' %>
-          	
-            <p class="fg-gray">Posted <%= distance_of_time_in_words(post.created_at, Time.now) %> ago.</p>
-            <%= post.body %>
-          </div>
-          <div class="card-footer">
-          	<button class="button primary"><%= link_to 'Show', post %></button>
-            <button class="button secondary"><%= link_to 'Edit', edit_post_path(post) if logged_in?(:site_admin) %></button>
-            <button class="button secondary"><%= link_to 'Delete', post_path(post), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %></button>
-          </div>
+           <%= link_to '', post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", class: 'mif-bin mif-3x fg-black', data: { confirm: 'Are you sure?' } %>    
+            
+          <% end %>
+
         </div>
       </div>
-    <% end %>
-  </div>
+    </div>
+  <% end %>
+  <% if logged_in?(:site_admin) %>
+    <button class="new-post-button button dark large rounded pos-fixed pos-bottom-center">
+      <%= link_to ' Create New Post', new_post_path, {:style=>'color:black;'} %>
+    </button>
+  <% end %>
+</div>
+
 
 
 
