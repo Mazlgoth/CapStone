@@ -3,7 +3,7 @@
     <div class="feature-table row mt-10 pos-absolute-md">
       <% @posts.each do |post| %>
         <div class="cell-md-5" style="margin-bottom: 30px;">
-          <%= image_tag 'cosplay.jpg', :class => 'thumb_image' %>
+          <%= image_tag 'cosplay.jpg', :class => 'thumb_image rounded' %>
         </div>
         <div class="cell-md-7 d-inline-flex" style="margin-bottom: 30px;">
           <div class="card" style="background-color: gray;">
@@ -15,7 +15,7 @@
             </div>
 
             <div class="card-footer" style="justify-content: center;">
-              <button class="button bg-lightgrayBlue"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
+              <button class="button bg-lightgrayBlue rounded"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
             </div>
           </div>
         </div>
