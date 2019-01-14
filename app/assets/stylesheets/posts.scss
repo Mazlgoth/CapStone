@@ -1,4 +1,8 @@
 
+.app-bar .hamburger {
+    left: 0;
+}
+
 .feature-table {
 	background-color: #02045A;
 }
@@ -10,4 +14,13 @@
 
 .new-post-button {
 	color: white;
+}
+
+.head-space {
+  margin-top: 60px;
+}
+
+.new-post-styles {
+	width: 1000px;
+	padding: 40px
 }
