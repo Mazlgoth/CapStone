@@ -5,4 +5,7 @@ class Post < ApplicationRecord
    validates_presence_of :title, :body, :thumb_image, :image
 
    # belongs_to :user
+
+   mount_uploader :thumb_image, PostUploader
+   mount_uploader :image, PostUploader
 end

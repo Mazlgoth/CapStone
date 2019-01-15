@@ -23,11 +23,9 @@
         </div>
 
         <div class="cell-6">
-          <div class="form-group">
-            <%= form_for @post do |f| %>
-              <%= form.label :thumb_image %>
-              <%= form.file_field :thumb_image %>
-            <% end %>
+          <div class="form-group">            
+            <%= form.label :thumb_image %>
+            <%= form.file_field :thumb_image %>            
           </div>
         </div>      
       </div>
@@ -41,11 +39,9 @@
         </div>
         
         <div class="cell-6">
-          <div class="form-group">
-            <%= form_for @post do |f| %>
-              <%= form.label :image %>
-              <%= form.file_field :image %>
-            <% end %>
+          <div class="form-group">            
+            <%= form.label :image %>
+            <%= form.file_field :image %>            
           </div>
         </div>
       </div>
