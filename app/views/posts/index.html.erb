@@ -1,8 +1,8 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Posts</h1>
+<div class="container-medium">
+	<p id="notice"><%= notice %></p> 
 
-  <%= link_to ' Create New Post', new_post_path %>
+	<%= render @posts %>
 
-  <%= render @posts %>
+</div>
 

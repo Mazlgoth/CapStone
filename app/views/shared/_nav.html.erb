@@ -1,6 +1,27 @@
-<div class="<% location %>">
-  <div><%= link_to "Home", root_path %></div>
-  <div><%= link_to "About", about_path %></div>
-  <div><%= link_to "Contact", contact_path %></div>
-  <div><%= link_to "Costumes", posts_path %></div>
+<div data-role="appbar" data-expand-point="md" class=" bg-grayBlue">
+  <ul class="app-bar-menu bg-active">
+    <li><%= link_to "Home", root_path %></li>
+		<li><%= link_to "About", about_path %></li>
+		<li><%= link_to "Contact", contact_path %></li>
+		<li><%= link_to "Costumes", posts_path %></li>
+  </ul>
+
+  <div class="pos-fixed pos-top-center">	
+		<a href="#" class="brand no-hover">
+	    <span style="width: 255px; height: 53px;" class="p-2 border bd-dark border-radius">
+	      Maz's causeplay design and creation.
+	    </span>
+	  </a>
+	</div>
+
+
+	
+	
+	<div>
+		<a href="#" class="dropdown-toggle mif-more-vert mif-3x"></a>
+	    <ul class="d-menu" data-role="dropdown">
+	      <li><%= login_helper %></li>
+	    </ul>
+  </div>
 </div>
+

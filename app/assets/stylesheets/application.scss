@@ -1,0 +1,36 @@
+
+.app-bar .hamburger {
+    left: 0;
+}
+
+body { 
+  background-image: image-url('/assets/sewing.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  background-clip: border-box;
+  background-origin: padding-box;
+  -moz-background-size: cover;
+  background-size: cover; 
+}
+
+.container {
+  background-color: transparent;
+  margin-top: 50px;
+}
+
+.thumb_image {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.new-post-styles {
+  width: 1000px;
+  padding: 40px
+}
+
+.head-space {
+  margin-top: 60px;
+}
+
+

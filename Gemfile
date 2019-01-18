@@ -55,5 +55,12 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Custom Gems
+gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.4'
-gem 'devise', '~> 4.5'
+gem 'devise', '~> 4.5' 
+gem 'petergate', '~> 2.0', '>= 2.0.1'
+gem 'carrierwave', '~> 1.3', '>= 1.3.1'
+gem 'mini_magick', '~> 4.9', '>= 4.9.2'
+gem 'carrierwave-aws', '~> 1.3'
+gem 'dotenv-rails', '~> 2.6'

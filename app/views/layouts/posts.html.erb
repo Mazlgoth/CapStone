@@ -6,20 +6,25 @@
     <%= csp_meta_tag %>
 
     <meta name="keywords" content="<%= @seo_keywords %>" />
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+    <script href="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 
     <%= stylesheet_link_tag    'posts', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'posts', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
-    
     <%= render 'shared/nav', location: 'top' %>
-   
-    <%= login_helper %>
+    
+    <div class="container-fluid">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      
+      
 
-    <%= yield %>
+      <%= yield %>
+    </div>
+
   </body>
 </html>
