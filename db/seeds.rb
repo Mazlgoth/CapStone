@@ -1,6 +1,6 @@
 10.times do |post|
   Post.create!(
-  	thumb_image: "https://place-hold.it/500x400",
+  	thumb_image: "../images/cosplay.jpg",
 		title: "Costume #{post}",
 		body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
 		sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
@@ -12,7 +12,7 @@
 
 		
 
-		image: "https://place-hold.it/700x1000"
+		image: "../images/cosplay.jpg"
   	)
 end
 
