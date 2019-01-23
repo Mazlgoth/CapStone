@@ -1,22 +1,22 @@
-<div class="feature-table row mt-10 pos-absolute-md">
+<div class="feature-table row mt-10 pos-absolute-md bg-gray">
   <% @posts.each do |post| %>
-    <div class="cell-md-4 post-cell-parent">
+    <div class="cell-md-4">
       <div class="card bg-grayBlue">
-        <div class="card-header">
+        <div class="card-header"  style="padding: 20px;">
           <%= post.title %>         
         </div>
         <div class="card-content p-2">
-        	<%= image_tag 'cosplay.jpg', :class => 'thumb_image rounded' %>
+        	<%= image_tag post.thumb_image.url, :class => 'thumb_image rounded', height: '300px' %>
 
           <p class="fg-gray">Posted <%= distance_of_time_in_words(post.created_at, Time.now) %> ago.</p>
           
-          <%= post.body %>
+          <%= post.body.truncate(120) %>
         </div>
         <div class="card-footer">
-          <button class="button bg-lightgrayBlue rounded"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
+          <button class="button bg-gray rounded"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
 
           <% if logged_in?(:site_admin) %>
-            <%= link_to '', edit_post_path(post), method: :edit, id: "edit_post_#{post.id}_from_index", class: 'mif-pencil mif-3x fg-black' %>
+            <%= link_to '', edit_post_path(post.id), class: 'mif-pencil mif-3x fg-black' %>
             <%= link_to '', post_path(post), method: :delete, id: "delete_post_#{post.id}_from_index", class: 'mif-bin mif-3x fg-black', data: { confirm: 'Are you sure?' } %>
           <% end %>
         </div>
@@ -30,7 +30,3 @@
     </button>
   <% end %>
 </div>
-
-
-
-

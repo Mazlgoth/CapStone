@@ -1,25 +1,32 @@
-<h1 style="color: white;">Hi <%= current_user.first_name %></h1>
-  <div class="container text-center">
-    <div class="feature-table row mt-10 pos-absolute-md">
-      <% @posts.each do |post| %>
-        <div class="cell-md-5" style="margin-bottom: 30px;">
-           <%= image_tag 'cosplay.jpg', :class => 'thumb_image rounded' %>
-        </div>
-        <div class="cell-md-7 d-inline-flex" style="margin-bottom: 30px;">
-          <div class="card" style="background-color: gray;">
-            <div class="card-header">
-              <h3><%= post.title %></h3>
-            </div>
-            <div class="card-content p-2">
-              <%= post.body %>
-            </div>
+<link rel="stylesheet" href="https://cdn.metroui.org.ua/v4/css/metro-all.min.css">
+<script href="https://cdn.metroui.org.ua/v4/js/metro.min.js"></script>
 
-            <div class="card-footer" style="justify-content: center;">
-              <button class="button bg-lightgrayBlue rounded"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
-            </div>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+
+<h1 style="color: white;">Hi <%= current_user.first_name %></h1>
+<div class="container text-center">
+  <div class="feature-table row mt-10 pos-absolute-md">
+    <% @posts.each do |post| %>
+      <div class="cell-md-5" style="margin-bottom: 30px;">
+        <%= image_tag post.thumb_image.url, :class => 'thumb_image bg-gray rounded', height: 300, width:300 %>
+      </div>
+      <div class="cell-md-7 d-inline-flex" style="margin-bottom: 30px;">
+        <div class="card" style="background-color: gray;">
+          <div class="card-header">
+            <h3><%= post.title %></h3>
+          </div>
+          <div class="card-content p-2">
+            <%= post.body.truncate(225) %>
+          </div>
+
+          <div class="card-footer" style="justify-content: center;">
+            <button class="button bg-lightGrayBlue rounded"><%= link_to 'Show', post, {:style=>'color:black; text-decoration: none;'} %></button>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
+</div>
 

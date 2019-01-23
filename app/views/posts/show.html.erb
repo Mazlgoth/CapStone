@@ -1,25 +1,27 @@
 <div class="head-space"></div>
 <p id="notice"><%= notice %></p>
 
-
-	<div class="container-fluid">
+<body class="bg-gray">
+	<div class="container">
 		<div class="grid">
-			<div class="row">
-				<%= @post.title %>
+			<div class="row bg-grayBlue border bd-dark border-radius" style="margin: 50px;">
+				<h1><%= @post.title %></h1>
 			</div>
 
 			<div class="row">
 				<div class="cell">
-					
+					<div class="img-container">
+						<%= image_tag @post.image.url, :class => 'image rounded' %>
+					</div>
 				</div>
 			</div>
 
-			<div class="row">
+			<div class="row bg-grayBlue border bd-dark border-radius" style="margin: 50px;">
 				<div class="cell">
 					<%= @post.body %>
 				</div>
 			</div>
 		</div>
 	</div>
-
+</body>
 

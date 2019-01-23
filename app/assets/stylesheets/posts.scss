@@ -1,10 +1,6 @@
 
 .app-bar .hamburger {
-    left: 0;
-}
-
-.feature-table {
-	background-color: #02045A;
+  left: 0;
 }
 
 .thumb_image {
@@ -23,4 +19,16 @@
 .new-post-styles {
 	width: 1000px;
 	padding: 40px
+}
+
+#columns {
+  -webkit-column-count: 3;
+  -webkit-column-gap: 10px;
+  -webkit-column-fill: auto;
+  -moz-column-count: 3;
+  -moz-column-gap: 10px;
+  -moz-column-fill: auto;
+  column-count: 3;
+  column-gap: 10px;
+  column-fill: auto;
 }

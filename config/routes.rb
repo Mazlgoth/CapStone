@@ -3,7 +3,6 @@ Rails.application.routes.draw do
 
   resources :posts
 
-  get 'about', to: 'pages#about'
-  get 'contact', to: 'pages#contact' 
+  get 'about', to: 'pages#about' 
   root to: 'pages#home'
 end
