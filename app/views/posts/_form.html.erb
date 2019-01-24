@@ -24,8 +24,9 @@
 
         <div class="cell-6">
           <div class="form-group">            
-            <%= form.label :thumb_image %>
-            <%= form.file_field :thumb_image %>            
+            <label class="button primary rounded" style="margin-top: 25px;">
+              Upload a thumb image <%= form.file_field :thumb_image, style: 'display:none;' %>  
+            </label>
           </div>
         </div>      
       </div>
@@ -40,8 +41,9 @@
         
         <div class="cell-6">
           <div class="form-group">            
-            <%= form.label :image %>
-            <%= form.file_field :image %>            
+            <label class="button primary rounded" style="margin-top: 25px;">
+              Upload a main image <%= form.file_field :image, style: 'display:none;' %>
+            </label>
           </div>
         </div>
       </div>
