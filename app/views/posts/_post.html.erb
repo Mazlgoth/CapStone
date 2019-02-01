@@ -3,7 +3,7 @@
     <div class="cell-md-4">
       <div class="card bg-grayBlue">
         <div class="card-header"  style="padding: 20px;">
-          <%= post.title %>         
+          <h2><%= post.title %></h2>         
         </div>
         <div class="card-content p-2">
         	<%= image_tag post.thumb_image.url, :class => 'thumb_image rounded', height: '300px' %>
@@ -22,11 +22,13 @@
         </div>
       </div>
     </div>
-  <% end %>
+  <% end %> 
+</div>
 
   <% if logged_in?(:site_admin) %>
-    <button class="new-post-button button dark large rounded pos-fixed pos-bottom-center">
-      <%= link_to ' Create New Post', new_post_path, {:style=>'color:black;'} %>
+    <button class="button dark large rounded pos-fixed pos-bottom-center">
+      <%= link_to ' Create New Post', new_post_path, {:style=>'color:white; text-decoration: none;'} %>
     </button>
   <% end %>
-</div>
+
+
