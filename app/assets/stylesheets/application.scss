@@ -3,14 +3,18 @@
 }
 
 #background { 
-  background: image-url('/assets/sewing.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-clip: border-box;
-  background-origin: padding-box;
-  -moz-background-size: cover;
-  background-size: cover; 
+  background: image-url('sewing.jpg') no-repeat;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
 }
 
 .container {
