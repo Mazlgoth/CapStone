@@ -26,8 +26,8 @@
 </div>
 
   <% if logged_in?(:site_admin) %>
-    <button class="button dark large rounded pos-fixed pos-bottom-center">
-      <%= link_to ' Create New Post', new_post_path, {:style=>'color:white; text-decoration: none;'} %>
+    <button class="action-button dark large pos-fixed pos-top-right" style="margin-top: 60px;">
+      <%= link_to '', new_post_path, class: 'mif-plus fg-white' %>
     </button>
   <% end %>
 
